@@ -55,6 +55,8 @@ env:
   SERVICE: testing-cloudbuild # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
+
+
 jobs:
   deploy:
     # Add 'id-token' with the intended permissions for workload identity federation
@@ -65,13 +67,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: 'actions/checkout@v4'
+
 
   
      # NOTE: Alternative option - authentication via credentials json
       - name: Google Auth
         id: auth
-        uses: 'google-github-actions/auth@v0'
+        uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
