@@ -49,7 +49,7 @@ name: Deploy to Cloud Run from Source
 on:
   push:
     branches: [ "main" ]
-
+# for testing purpases they are here and not in variables
 env:
   PROJECT_ID: peak-brook-407717 # TODO: update Google Cloud project id
   SERVICE: testing-cloudbuild # TODO: update Cloud Run service name
