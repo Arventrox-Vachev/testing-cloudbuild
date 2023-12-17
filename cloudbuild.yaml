@@ -1,0 +1,10 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/$PROJECT_ID/quickstart-image",
+        "us-docker.pkg.dev/peak-brook-407717/gcr.io",
+      ]
