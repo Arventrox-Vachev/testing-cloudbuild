@@ -1,6 +1,5 @@
 FROM node:18-alpine
 
-
 ENV PORT=8080
 ENV HOST=0.0.0.0
 
@@ -12,4 +11,4 @@ RUN npm install
 RUN npm run build
 
 
-CMD ["npm", "run", "docker-start"]
+CMD ["npm", "run", "start"]
